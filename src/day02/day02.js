@@ -2,12 +2,12 @@ import { readInputBySeparator } from '../utils.js'
 
 const input = readInputBySeparator('./src/day02/input.txt', ',')
 
-function getFirstHalf(str) {
+const getFirstHalf = (str) => {
   const midpoint = Math.floor(str.length / 2)
   return str.slice(0, midpoint)
 }
 
-function getSecondHalf(str) {
+const getSecondHalf = (str) => {
   const midpoint = Math.floor(str.length / 2)
   return str.slice(midpoint)
 }
