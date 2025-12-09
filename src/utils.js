@@ -1,8 +1,13 @@
-import { readFileSync } from "fs";
+import { readFileSync } from 'fs'
 
 export const readInput = (filepath) => {
-  const text = readFileSync(filepath, "utf-8");
-  return text.split("\n");
-};
+  const text = readFileSync(filepath, 'utf-8')
+  return text.split('\n')
+}
 
-export const convertLinesToNumeric = (input) => input.map((el) => +el);
+export const readInputBySeparator = (filepath, separator) => {
+  const text = readFileSync(filepath, 'utf-8')
+  return text.split(separator)
+}
+
+export const convertLinesToNumeric = (input) => input.map((el) => +el)
