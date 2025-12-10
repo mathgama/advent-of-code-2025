@@ -25,7 +25,24 @@ const firstStar = () => {
     }
   })
 
-  console.log(result)
+  console.log('First star: ', result)
+}
+
+const secondStar = () => {
+  let result = 0
+
+  input.forEach((range) => {
+    const [rangeBegin, rangeEnd] = range.split('-')
+    const regex = /^(\d+)\1{1,}$/
+
+    for (let i = +rangeBegin; i <= rangeEnd; i++) {
+      const str = i.toString()
+      if (regex.test(str)) result += i
+    }
+  })
+
+  console.log('Seconds star: ', result)
 }
 
 firstStar()
+secondStar()
